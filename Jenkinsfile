@@ -20,12 +20,12 @@ pipeline {
         }
         stage('Running Tests') {
             steps {
-                sh 'dotnet test --logger "trx;LogFileName=TestResult.trx" TestProject/TestProject.csproj'
+                sh 'dotnet test --logger "trx;LogFileName=TestResult.trx" SuggestionApiTests/SuggestionApiTests.csproj'
             }
             
             post {
                 always {
-                    ws('/var/lib/jenkins/workspace/BlazorApp/TestProject/TestResults')
+                    ws('/var/lib/jenkins/workspace/SuggestionApplication/SuggestionApiTests/TestResults')
                     {
                         mstest()
                     }                    
