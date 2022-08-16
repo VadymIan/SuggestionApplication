@@ -1,6 +1,6 @@
 pipeline {
     environment {
-    imagename = "mylocaldocker3103/suggestionApi"
+    imagename = "mylocaldocker3103/suggestionapi"
     dockerImage = ''
   }
 
@@ -42,7 +42,7 @@ pipeline {
 	stage('Pushing Image') {
 		steps {
 			script {
-				docker.withRegistry('https://registry.hub.docker.com', 'myapp') {
+				docker.withRegistry('https://registry.hub.docker.com', 'suggestionapi') {
 					dockerImage.push('latest')
 				}
 			}
