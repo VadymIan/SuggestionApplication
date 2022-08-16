@@ -3,12 +3,12 @@ WORKDIR /app
 
 COPY *.sln ./
 COPY SuggestionApplication.Api/log.txt /app
-COPY SuggestionApplication.Api/*.csproj SuggestionApplication.Api/
-COPY SuggestionApplication.Application/*.csproj SuggestionApplication.Application/
-COPY SuggestionApplication.Domain/*.csproj SuggestionApplication.Domain/
-COPY SuggestionApplication.Infrastructure/*.csproj SuggestionApplication.Infrastructure/
-COPY SuggestionApplication.Persistence/*.csproj SuggestionApplication.Persistence/
-WORKDIR /app
+COPY SuggestionApplication.Api/*.csproj /app/SuggestionApplication.Api/
+COPY SuggestionApplication.Application/*.csproj /app/SuggestionApplication.Application/
+COPY SuggestionApplication.Domain/*.csproj /app/SuggestionApplication.Domain/
+COPY SuggestionApplication.Infrastructure/*.csproj /app/SuggestionApplication.Infrastructure/
+COPY SuggestionApplication.Persistence/*.csproj /app/SuggestionApplication.Persistence/
+
 RUN dotnet restore
 
 COPY . ./
