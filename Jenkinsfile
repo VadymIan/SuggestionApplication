@@ -35,7 +35,7 @@ pipeline {
 	stage('Building Image') {
 		steps {
 			script {
-				dockerImage = docker.build(imagename, "--no-cache")
+				dockerImage = docker.build(imagename, "--no-cache .")
 			}
 		}
 	}
