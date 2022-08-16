@@ -8,6 +8,7 @@ COPY SuggestionApplication.Application/*.csproj SuggestionApplication.Applicatio
 COPY SuggestionApplication.Domain/*.csproj SuggestionApplication.Domain/
 COPY SuggestionApplication.Infrastructure/*.csproj SuggestionApplication.Infrastructure/
 COPY SuggestionApplication.Persistence/*.csproj SuggestionApplication.Persistence/
+WORKDIR /app
 RUN dotnet restore
 
 COPY . ./
