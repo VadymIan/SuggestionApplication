@@ -1,6 +1,6 @@
 pipeline {
     environment {
-    imagename = "mylocaldocker3103/test-project"
+    imagename = "mylocaldocker3103/suggestionApi"
     dockerImage = ''
   }
 
@@ -9,13 +9,13 @@ pipeline {
     stages {
         stage('Cloning Git') {
             steps {
-                git 'https://github.com/VadymIan/BlazorApp.git'
+                git 'https://github.com/VadymIan/SuggestionApplication.git'
             }
         }
         stage('Building') {
             steps {
 		 sh 'dir'
-                 sh 'dotnet build BlazorApp1.sln --configuration Release'
+                 sh 'dotnet build SuggestionApplication.sln --configuration Release'
             }
         }
         stage('Running Tests') {
