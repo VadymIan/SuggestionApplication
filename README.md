@@ -1,1 +1,1 @@
-# SuggestionApplication
+# SuggestionApp
