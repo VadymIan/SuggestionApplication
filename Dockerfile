@@ -27,9 +27,9 @@ RUN apt-get -y install net-tools
 
 COPY --from=build-env /app/out .
 
-EXPOSE 7020
+EXPOSE 8080
 
 ENV ASPNETCORE_ENVIRONMENT Development
-ENV ASPNETCORE_URLS http://*:7020
+ENV ASPNETCORE_URLS http://*:8080
 
 ENTRYPOINT ["dotnet", "SuggestionApplication.Api.dll"]
