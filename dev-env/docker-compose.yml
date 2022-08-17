@@ -24,10 +24,10 @@ services:
         mem_limit: 512m
         container_name: suggestionapplication
         ports:
-            - 8080:8080
+            - 7020:7020
         environment:
             - ASPNETCORE_ENVIRONMENT=development
-            - ASPNETCORE_URLS=http://*:8080
+            - ASPNETCORE_URLS=http://*:7020
         env_file:
             - ./local.env
         depends_on:
